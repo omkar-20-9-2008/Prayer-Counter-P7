@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prayer Counter P7</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="style.css">
+    <script src="menu.js" type="text/javascript" defer></script>
+    <script src="menubar.js" type="text/javascript" defer></script>
+</head>
+<body>
+
+    <header-component></header-component>
+
+    <!--Menubar-->
+    <menubar-component></menubar-component>
+
+    <div class="content">
+    <center>
+        <a href="h108.html"><button id="h108" class="home" style="margin-top:100px">×108</button></a><br><br>
+        <a href="h10.html"><button id="h10" class="home">×10</button></a><br><br>
+        <a href="hcimg.html"><button id="hci" class="home">Hanuman Chalisa</button></a><br><br>
+        <a href="hc.html"><button id="hc" class="home">Hanuman Chalisa Counter</button></a><br><br>
+        <a href="sunnames.html"><button id="sun" class="home">Suryachi Nave</button></a><br><br>
+        <a href="ganpati.html"><button id="gan" class="home">Ganapatichi 21 Nave</button></a><br><br>
+        <a href="dattamala.html"><button id="dat" class="home">Dattamala Mantra</button></a><br><br>
+    </center>
+    </div>
+    <script type="text/javascript">
+
+        function check(){
+            var checkBox = document.getElementById("checkbox");
+
+            var menubar = document.getElementById("menubar");
+
+            if (checkBox.checked == true){
+                menubar.style.display="block";
+            } else {
+                menubar.style.display="none";
+            }
+        }
+
+        function darkmodeon(){
+            var onn = document.getElementById("dmon");
+            var offf = document.getElementById("dmoff");
+            var op = document.getElementById("op");
+
+            onn.style.display="none";
+            offf.style.display="block";
+
+            document.body.style.backgroundColor="#000032";
+        }
+
+        function darkmodeoff(){
+            var onn = document.getElementById("dmon");
+            var offf = document.getElementById("dmoff");
+            var op = document.getElementById("op");
+
+            offf.style.display="none";
+            onn.style.display="block";
+
+            document.body.style.backgroundColor="#c9e9f5"; 
+        }
+
+    </script>
+</body>
+
+</html>

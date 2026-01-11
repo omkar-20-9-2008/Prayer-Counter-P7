@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prayer Counter P7</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="style.css">
+    <script src="menu.js" type="text/javascript" defer></script>
+    <script src="menubar.js" type="text/javascript" defer></script>
+</head>
+<body>
+
+    <header-component></header-component>
+
+    <!--Menubar-->
+    <menubar-component></menubar-component>
+
+    <center><img style="margin-top: 60px; max-width: 450px;" id="datimage" src="dattamala.jpg" alt="dattamala_mantra" width="100%" height="auto" onclick="openy()"></center>
+
+    <div id="datbox">
+    <img src="cross.png" alt="cross" id="cross" onclick="closey()">
+    <center><img src="dattamala.jpg" id="datopen"></center>
+    </div>
+
+
+    <script type="text/javascript">
+
+        var img = document.getElementById("datimage");
+        var div = document.getElementById("datbox");
+    function openy() {
+        img.style.display="none";
+        div.style.display="block";
+    }
+
+    function closey(){
+        div.style.display="none";
+        img.style.display="block";   
+    }
+
+        function check(){
+            var checkBox = document.getElementById("checkbox");
+
+            var menubar = document.getElementById("menubar");
+
+            if (checkBox.checked == true){
+                menubar.style.display="block";
+            } else {
+                menubar.style.display="none";
+            }
+        }
+
+        function darkmodeon(){
+            var onn = document.getElementById("dmon");
+            var offf = document.getElementById("dmoff");
+
+
+            onn.style.display="none";
+            offf.style.display="block";
+
+            document.body.style.backgroundColor="#000032";
+
+
+        }
+
+        function darkmodeoff(){
+            var onn = document.getElementById("dmon");
+            var offf = document.getElementById("dmoff");
+
+            offf.style.display="none";
+            onn.style.display="block";
+
+            document.body.style.backgroundColor="#c9e9f5"; 
+
+        }
+
+    </script>
+</body>
+
+</html>

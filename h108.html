@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prayer Counter P7</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="style.css">
+    <script src="menu.js" type="text/javascript" defer></script>
+    <script src="menubar.js" type="text/javascript" defer></script>
+</head>
+<body>
+
+    <header-component></header-component>
+
+    <!--Menubar-->
+    <menubar-component></menubar-component>
+
+    <div class="content">
+
+
+    <P class="x108" style="padding: 100px;" id="op"></P>
+    <center><button id="clc" class="clc" onclick="add()" value="Click">Click</button></center><br><br>
+    <center><div>
+    <button class="btn" onclick="reset()"><i class="animation"></i>RESTART<i class="animation"></i>
+    </button></div></center>
+    </div>
+    <audio id="myAudio" src="bell-cut.mp3"></audio>
+
+
+    <script type="text/javascript">
+        var x = 0;
+        document.getElementById('op').innerHTML=x;
+
+        let audio= new audio
+        function add(){
+            x=x+1;
+            document.getElementById('op').innerHTML=x;
+            if(x==108){
+                playAudio();
+            }
+        }
+
+        function reset(){
+            x=0;
+            document.getElementById('op').innerHTML=x;
+        }
+
+        function playAudio(){
+            let audio = document.getElementById('myAudio');
+            audio.play();
+        }
+
+        function check(){
+            var checkBox = document.getElementById("checkbox");
+
+            var menubar = document.getElementById("menubar");
+
+            if (checkBox.checked == true){
+                menubar.style.display="block";
+            } else {
+                menubar.style.display="none";
+            }
+        }
+
+        function darkmodeon(){
+            var onn = document.getElementById("dmon");
+            var offf = document.getElementById("dmoff");
+            var op = document.getElementById("op");
+
+            onn.style.display="none";
+            offf.style.display="block";
+
+            document.body.style.backgroundColor="#000032";
+            op.style.color="white";
+
+        }
+
+        function darkmodeoff(){
+            var onn = document.getElementById("dmon");
+            var offf = document.getElementById("dmoff");
+            var op = document.getElementById("op");
+
+            offf.style.display="none";
+            onn.style.display="block";
+
+            document.body.style.backgroundColor="#c9e9f5"; 
+            op.style.color="rgb(5, 22, 14)";
+        }
+
+
+    </script>
+</body>
+
+</html>
